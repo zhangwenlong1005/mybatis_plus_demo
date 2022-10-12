@@ -1,0 +1,17 @@
+server:
+  port: 8088   #配置本服务器的端口为8088
+spring:
+  #数据库连接配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=CST&allowMultiQueries=true
+    username: root
+    password: root
+    druid:
+      test-on-borrow: true
+      test-while-idle: true
+
+#mybatis_plus日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
